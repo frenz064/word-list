@@ -1,4 +1,4 @@
-{
+{{
   "name": "word-list",
   "version": "1.0.0",
   "description": "This example is so cool.",
@@ -19,4 +19,4 @@
       "url": "heroku/nodejs"
     }
   ]
-}
+}}
