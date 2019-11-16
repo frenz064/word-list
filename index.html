@@ -1,0 +1,45 @@
+<html>
+ <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="index.js"></script>
+ </head>
+
+ <body>
+  <ul class="navbar">
+   <li>WordFinder</li>
+   <li class="name">Kelsey Frenzel</li>
+  </ul>
+
+  <br>
+
+  <form id="wordfinder" action="https://pages.github.umn.edu/frenz064/word-list/results.html" method="cors"> <!-- change when put on heroku -->
+    <div class="grid-item">
+     Letters: <input type="letters" name="let" title="Any Character A-Z">
+    </div>
+    <div class="grid-item">
+     <select name="len">
+      <option value="none">Choose Length of Word</option> <!-- means no length selected -->
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+     </select>
+    </div>
+
+    <div class="grid-item">
+    Word Pattern Limitations: <input type="pattern" name="pat" pattern="[A-Za-z.]{3,10}" title="3 to 10 Letters">
+    </div>
+   
+   <div class="grid-item">
+    <input type="submit" id="done">
+   </div>
+  </form> 
+  
+ </body>
+</html>
