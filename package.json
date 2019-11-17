@@ -2,8 +2,9 @@
   "name": "word-list",
   "version": "8.11.4",
   "description": "This example is so cool.",
-  "main": "index.js",
-
+"scripts": {
+  "start": "node index.js"
+}
  "repository": {
       "type": "git",
       "url": "https://github.com/frenz064/word-list.git"
