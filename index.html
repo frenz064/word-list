@@ -5,6 +5,8 @@
   <link rel="stylesheet" type="text/css" href="/index.css">
   <script src="index2.js"></script>
   <script>
+	  var http = require('http');
+var fs = require('fs');
 	  var result = fs.readFileSync('results.html');
 
 var server = http.createServer(function (req, res) {
