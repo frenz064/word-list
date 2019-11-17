@@ -9,7 +9,7 @@ var server = http.createServer(function (req, res) {
 }).listen(process.env.PORT || 5000);
 
 
-window.addEventListener('load', function () {
+$(document).ready(function(){
  $("#wordfinder").on('click', function (e) {
  	e.preventDefault();
   // verify data is correctly submitted then call functions to edit results.html
