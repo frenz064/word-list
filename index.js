@@ -5,15 +5,15 @@ var fs = require('fs');
 var server = http.createServer(function (req, res) {
   		switch (req.url) {
         		case "/index.css" :
-            res.writeHead(200, {"Content-Type": "text/css"});
-            res.write(cssFile);
-            break;
-        default :    
-            res.writeHead(200, {"Content-Type": "text/html"});
-            res.write(htmlFile);
+            			res.writeHead(200, {"Content-Type": "text/css"});
+            			res.write(res);
+            			break;
+        		default :    
+            			res.writeHead(200, {"Content-Type": "text/html"});
+            			res.write(res);
     });
     res.end();
-	      }).listen(process.env.PORT || 5000);
+}).listen(process.env.PORT || 5000);
 
 /*$(document).ready(function(){
 
