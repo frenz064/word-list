@@ -11,9 +11,9 @@ var server = http.createServer(function (req, res) {
         		default :    
             			res.writeHead(200, {"Content-Type": "text/html"});
             			res.write(res);
-    });
-    res.end();
-}).listen(process.env.PORT || 5000);
+    		};
+    		res.end();
+	}).listen(process.env.PORT || 5000);
 
 /*$(document).ready(function(){
 
