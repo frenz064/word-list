@@ -4,8 +4,10 @@ var fs = require('fs');
 //create a server object:
 http.createServer(function (req, res) {
   fs.readFile('index.html', function(err,data) {
+	 res.writeHead(200,{'Content-Type': 'text/html'});
 	 res.write(data);
 	 fs.readFile('index.css', function(err2,data2) {
+		res.writeHead(200,{"Content-Type": "text/css"});
 		res.write(data2);
 		res.end();
    	 });
