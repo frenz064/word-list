@@ -5,7 +5,7 @@ var fs = require('fs');
 http.createServer(function (req, res) {
   fs.readFile('index.html', function(err,data) {
 	 res.write(data);
-	 fs.readFile('index.css', function(err,data2) {
+	 fs.readFile('index.css', function(err2,data2) {
 		res.write(data2);
 		res.end();
    	 });
