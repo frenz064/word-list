@@ -6,9 +6,9 @@ http.createServer(function (req, res) {
   res.end(); //end the response
 }).listen(process.env.PORT || 5000);
 
-$(document).ready(function(){
+/*$(document).ready(function(){
 
- /*$("#wordfinder").on('click', function (e) {
+ $("#wordfinder").on('click', function (e) {
  	e.preventDefault();
   // verify data is correctly submitted then call functions to edit results.html
   var $form = $(this),url=$form.attr('action');
@@ -16,6 +16,6 @@ $(document).ready(function(){
  	var posting = $.post("results.html", serialize);
   /*var $inputs = $("#wordfinder:inputs").serializeArray();
   e.preventDefault();*/
- });
-});
-*/
+// });
+//});
+
