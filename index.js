@@ -9,7 +9,7 @@ var server = http.createServer(function (req, res) {
 }).listen(process.env.PORT || 5000);
 
 
-$(document).ready(function(){
+/*$(document).ready(function(){
  $("#wordfinder").on('click', function (e) {
  	e.preventDefault();
   // verify data is correctly submitted then call functions to edit results.html
@@ -18,6 +18,6 @@ $(document).ready(function(){
  	var posting = $.post("results.html", serialize);
   /*var $inputs = $("#wordfinder:inputs").serializeArray();
   e.preventDefault();*/
- });
-});
+ //});
+//});
 
