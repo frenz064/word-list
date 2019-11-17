@@ -4,19 +4,12 @@ var fs = require('fs');
 //create a server object:
 http.createServer(function (req, res) {
   fs.readFile('index.html', function(err,data) {
-	if (err) {
-         console.error(err)
-          return
-         }
-         console.log(data)
-  	res.end(); //end the response
+  	fs.readFile('index.css', function(err,data) {
+		console.log(data);
+   	});
+  	res.end();
   });
- fs.readFile('index.css', function(err,data) {
-	 if (err) {
-    	   console.error(err);
-   	 return;
-  	}
-  console.log(data);
+  
 }).listen(process.env.PORT || 5000);
 
 /*$(document).ready(function(){
