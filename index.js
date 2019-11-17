@@ -11,7 +11,8 @@ var fs = require('fs');
 		res.writeHead(200,{"Content-Type": "text/css"});
 		res.write(data2);*/
 		res.end();
-	}).listen(process.env.PORT || 5000);
+  	});
+}).listen(process.env.PORT || 5000);
 
 
 /*$(document).ready(function(){
