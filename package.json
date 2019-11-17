@@ -4,7 +4,7 @@
   "description": "This example is so cool.",
 "scripts": {
   "start": "node index.js"
-}
+},
  "repository": {
       "type": "git",
       "url": "https://github.com/frenz064/word-list.git"
