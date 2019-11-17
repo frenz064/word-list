@@ -2,19 +2,25 @@ var http = require('http');
 var fs = require('fs');
 
 //create a server object:
-http.createServer(function (req, res) {
-  fs.readFile('index.html', function(err,data) {
-	 res.writeHead(200,{'Content-Type': 'text/html'});
-	 res.write(data);
-	 /*fs.readFile('index.css', function(err2,data2) {
-		res.writeHead(200,{"Content-Type": "text/css"});
-		res.write(data2);*/
-		res.end();
-   	// });
-  });
-
-  
-}).listen(process.env.PORT || 5000);
+var server = http.createServer(function (req, res) {
+  		fs.readFile('./'+ res.url, function(err,data) {
+	 		var dotoffset = request.url.lastIndexOf('.');
+            var mimetype = dotoffset == -1
+                            ? 'text/plain'
+                            : {
+                                '.html' : 'text/html',
+                                '.ico' : 'image/x-icon',
+                                '.jpg' : 'image/jpeg',
+                                '.png' : 'image/png',
+                                '.gif' : 'image/gif',
+                                '.css' : 'text/css',
+                                '.js' : 'text/javascript'
+                                }[ request.url.substr(dotoffset) ];
+            response.setHeader('Content-type' , mimetype);
+            response.end(data);
+            console.log( request.url, mimetype );
+  		});
+	      }).listen(process.env.PORT || 5000);
 
 /*$(document).ready(function(){
 
