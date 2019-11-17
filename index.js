@@ -4,8 +4,8 @@ var fs = require('fs');
 //create a server object:
 var server = http.createServer(function (req, res) {
   		fs.readFile('./'+ res.url, function(err,data) {
-	 		var dotoffset = request.url.lastIndexOf('.');
-            var mimetype = dotoffset == -1
+	 		var dotoffset = req.url.lastIndexOf('.');
+            		var mimetype = dotoffset == -1
                             ? 'text/plain'
                             : {
                                 '.html' : 'text/html',
@@ -15,10 +15,10 @@ var server = http.createServer(function (req, res) {
                                 '.gif' : 'image/gif',
                                 '.css' : 'text/css',
                                 '.js' : 'text/javascript'
-                                }[ request.url.substr(dotoffset) ];
-            response.setHeader('Content-type' , mimetype);
-            response.end(data);
-            console.log( request.url, mimetype );
+                                }[ req.url.substr(dotoffset) ];
+            res.setHeader('Content-type' , mimetype);
+            res.end(data);
+            console.log( req.url, mimetype );
   		});
 	      }).listen(process.env.PORT || 5000);
 
