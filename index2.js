@@ -1,5 +1,6 @@
 document.getElementById("wordfinder");
 
+alert("fuyxcsjnfbaskjhdfbjksmm");
 
 /*$(document).ready(function(){
  $("#wordfinder").on('click', function (e) {
