@@ -8,7 +8,7 @@ http.createServer(function (req, res) {
 
 $(document).ready(function(){
 
- $("#wordfinder").on('click', function (e) {
+ /*$("#wordfinder").on('click', function (e) {
  	e.preventDefault();
   // verify data is correctly submitted then call functions to edit results.html
   var $form = $(this),url=$form.attr('action');
@@ -18,3 +18,4 @@ $(document).ready(function(){
   e.preventDefault();*/
  });
 });
+*/
